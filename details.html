@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Детали бронирования</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  >
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="details">
+  <div class="app-root">
+    <header class="app-header">
+      <button class="back-button" id="backButton" aria-label="Назад">
+        <span class="back-chevron">‹</span>
+        <span>Назад</span>
+      </button>
+      <div class="header-center">
+        <div class="header-title">Заявка</div>
+        <div class="header-subtitle" id="detailsSubtitle"></div>
+      </div>
+      <div class="header-right"></div>
+    </header>
+
+    <main class="content">
+      <section class="card glass details-card">
+        <div class="details-header">
+          <div class="details-main">
+            <div class="details-name" id="detailsFullName"></div>
+            <div class="details-phone" id="detailsPhone"></div>
+          </div>
+          <div class="status-indicator" id="detailsStatusIndicator"></div>
+        </div>
+
+        <dl class="details-list" id="detailsList"></dl>
+
+        <div class="details-actions" id="detailsActions"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+

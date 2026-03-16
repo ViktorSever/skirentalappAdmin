@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заявки на бронирование</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+  >
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="list">
+  <div class="app-root">
+    <header class="app-header">
+      <div class="header-title">Бронирования</div>
+      <div class="header-subtitle">Управление заявками</div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab-button tab-active" data-status="ALL">Все</button>
+      <button class="tab-button" data-status="NEW">Новые</button>
+      <button class="tab-button" data-status="CONFIRMED">Активные</button>
+      <button class="tab-button" data-status="COMPLETED">Завершённые</button>
+      <button class="tab-button" data-status="CANCELLED">Отменённые</button>
+    </nav>
+
+    <main class="content">
+      <section class="card glass list-card">
+        <div class="list-header">
+          <div class="list-header-left">
+            <span class="list-header-title">Список заявок</span>
+            <button
+              class="sort-indicator"
+              type="button"
+              title="Сортировка: сначала более свежие заявки"
+              aria-label="Сортировка: сначала более свежие заявки"
+            >
+              <span class="sort-indicator-icon">
+                <!-- Простая иконка сортировки (стрелка вниз к новой заявке) -->
+                <svg viewBox="0 0 16 16" aria-hidden="true">
+                  <path
+                    d="M4 3.25a.75.75 0 0 1 1.5 0v7.19l1.72-1.72a.75.75 0 1 1 1.06 1.06l-3.03 3.03a.75.75 0 0 1-1.06 0L1.16 9.78a.75.75 0 1 1 1.06-1.06L4 10.44z"
+                  />
+                  <path
+                    d="M9.5 4.75A.75.75 0 0 1 10.25 4h4a.75.75 0 0 1 0 1.5h-4A.75.75 0 0 1 9.5 4.75Zm0 3A.75.75 0 0 1 10.25 7h3a.75.75 0 0 1 0 1.5h-3A.75.75 0 0 1 9.5 7.75Zm0 3a.75.75 0 0 1 .75-.75h2a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1-.75-.75Z"
+                  />
+                </svg>
+              </span>
+              <span class="sort-indicator-label">Новые сверху</span>
+            </button>
+          </div>
+          <span class="list-header-count" id="bookingCount"></span>
+        </div>
+        <div id="bookingList" class="booking-list"></div>
+        <div id="emptyState" class="empty-state hidden">
+          <div class="empty-icon">😌</div>
+          <div class="empty-title">Пока нет заявок</div>
+          <div class="empty-subtitle">Измените фильтр или добавьте данные в Firestore.</div>
+        </div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast hidden"></div>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+

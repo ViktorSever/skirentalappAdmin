@@ -1,0 +1,21 @@
+{
+  "name": "booking-cupertino",
+  "version": "1.0.0",
+  "description": "Веб-приложение для управления бронированиями в стиле Cupertino на JS и Firebase",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -p 5173 -c-1 .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "booking",
+    "firebase",
+    "cupertino"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
